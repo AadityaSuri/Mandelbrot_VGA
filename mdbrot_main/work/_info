@@ -10,15 +10,15 @@ cModel Technology
 dC:/Users/aadit/Desktop/final_Aaditya_Suri
 vescape_time_mdbrot
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1668910657
+!s110 1668916248
 !i10b 1
-!s100 9>L0kU]7HjcbIc68@IG]S0
-ImLb=D3kJ2EVW@@5:h_=Yl0
+!s100 fXQmj7`g4^i`PFM_U0>VB2
+IEVe@]gb<YO<`fTmKkFlb=1
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 !s105 escape_time_mdbrot_sv_unit
 S1
 Z2 dC:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main
-w1668910652
+w1668915489
 8C:\Users\aadit\Desktop\Mandelbrot_VGA\mdbrot_main\escape_time_mdbrot.sv
 FC:\Users\aadit\Desktop\Mandelbrot_VGA\mdbrot_main\escape_time_mdbrot.sv
 L0 6
@@ -26,16 +26,88 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1668910657.000000
+!s108 1668916248.000000
 !s107 C:\Users\aadit\Desktop\Mandelbrot_VGA\mdbrot_main\escape_time_mdbrot.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\aadit\Desktop\Mandelbrot_VGA\mdbrot_main\escape_time_mdbrot.sv|
 !i113 1
 Z4 o-work work -sv
 Z5 tCvgOpt 0
+vmdbrot_top_level_single_nozoom
+R0
+!s110 1668916539
+!i10b 1
+!s100 Qc5hUQ^e?@MkAeQR:>A681
+I9g^4OlLOBB4hZYJ8bL[AO0
+R1
+Z6 !s105 mdbrot_top_level_sv_unit
+S1
+R2
+w1668916535
+Z7 8C:\Users\aadit\Desktop\Mandelbrot_VGA\mdbrot_main\mdbrot_top_level.sv
+Z8 FC:\Users\aadit\Desktop\Mandelbrot_VGA\mdbrot_main\mdbrot_top_level.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1668916539.000000
+Z9 !s107 C:\Users\aadit\Desktop\Mandelbrot_VGA\mdbrot_main\mdbrot_top_level.sv|
+Z10 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\aadit\Desktop\Mandelbrot_VGA\mdbrot_main\mdbrot_top_level.sv|
+!i113 1
+R4
+R5
+vtask2
+R0
+!s110 1668913990
+!i10b 1
+!s100 d==N]MUoV7;gYBH02;;:G0
+IC<k1HbmKm6iRF9WFBL_fd2
+R1
+R6
+S1
+R2
+w1668913941
+R7
+R8
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1668913990.000000
+R9
+R10
+!i113 1
+R4
+R5
+vtb_rtl_mdbrot
+R0
+!s110 1668916782
+!i10b 1
+!s100 FzEWjjzCQ@9UkjKDMF@1B0
+I4I;PE@c=6BX4PI6]M:kVf0
+R1
+!s105 tb_rtl_mdbrot_sv_unit
+S1
+R2
+w1668916777
+8C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/tb_rtl_mdbrot.sv
+FC:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/tb_rtl_mdbrot.sv
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1668916782.000000
+!s107 C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/tb_rtl_mdbrot.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/tb_rtl_mdbrot.sv|
+!i113 1
+R4
+R5
 vvga_adapter
 R0
 DXx6 sv_std 7 mti_fli 0 22 N`967G9WZ3=6fdOR5MX]S1
-Z6 !s110 1668905271
+Z11 !s110 1668916249
 !i10b 1
 !s100 h8aB6A^ia_odOh=<4`Ka>0
 IY8V[LVnl;zL6gAYE7H:OT3
@@ -43,7 +115,7 @@ R1
 !s105 vga_adapter_sv_unit
 S1
 R2
-Z7 w1655058263
+Z12 w1655058263
 8C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_adapter.sv
 FC:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_adapter.sv
 L0 82
@@ -51,7 +123,7 @@ R3
 r1
 !s85 0
 31
-Z8 !s108 1668905271.000000
+Z13 !s108 1668916249.000000
 !s107 C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_adapter.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_adapter.sv|
 !i113 1
@@ -59,7 +131,7 @@ R4
 R5
 vvga_address_translator
 R0
-R6
+R11
 !i10b 1
 !s100 >4Ck2[^7MRo410`;`mBhG0
 Ih3BCFh5g29ZMacMTXhO_o0
@@ -67,7 +139,7 @@ R1
 !s105 vga_address_translator_sv_unit
 S1
 R2
-R7
+R12
 8C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_address_translator.sv
 FC:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_address_translator.sv
 L0 8
@@ -75,7 +147,7 @@ R3
 r1
 !s85 0
 31
-R8
+R13
 !s107 C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_address_translator.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_address_translator.sv|
 !i113 1
@@ -83,7 +155,7 @@ R4
 R5
 vvga_controller
 R0
-R6
+R11
 !i10b 1
 !s100 K^Z0JG9FjLR6T71PJVY]`2
 I6R^JM7]<Yd<VdVhVFE]j12
@@ -91,7 +163,7 @@ R1
 !s105 vga_controller_sv_unit
 S1
 R2
-R7
+R12
 8C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_controller.sv
 FC:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_controller.sv
 L0 13
@@ -99,7 +171,7 @@ R3
 r1
 !s85 0
 31
-R8
+R13
 !s107 C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_controller.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_controller.sv|
 !i113 1
@@ -107,7 +179,7 @@ R4
 R5
 vvga_pll
 R0
-R6
+R11
 !i10b 1
 !s100 B@RTRAe2BCUY;gLZj0kH`3
 I44oY3_Eoa_=E^oK]IcKWV3
@@ -115,7 +187,7 @@ R1
 !s105 vga_pll_sv_unit
 S1
 R2
-R7
+R12
 8C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_pll.sv
 FC:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_pll.sv
 L0 36
@@ -123,7 +195,7 @@ R3
 r1
 !s85 0
 31
-R8
+R13
 !s107 C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_pll.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_pll.sv|
 !i113 1

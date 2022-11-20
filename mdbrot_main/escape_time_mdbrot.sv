@@ -15,14 +15,13 @@ module escape_time_mdbrot(input logic clk, input logic rst, input start, input l
     logic [12:0] iter;
 
     always @(posedge clk) begin
-        if (rst) 
+        if (!rst) 
             pstate <= `start;
         else 
             case (pstate)
                 `start: begin
                     x = 8'd0;
                     y = 7'd0;
-                    iter = 13'd0;
                     pstate <= start ? `pixel_on : `start;
                 end
 
@@ -34,21 +33,20 @@ module escape_time_mdbrot(input logic clk, input logic rst, input start, input l
                                    y = 7'd0;
                                    x = x + 8'd1;
                               end
+                              xm = 9'd0;
+                              ym = 8'd0;
+                              iter = 13'd0;
                               pstate <= `calc_loop;
                          end else 
                               pstate <= `done;
                 end
 
                 `calc_loop: begin
-                    xm = 9'd0;
-                    ym = 8'd0;
-                    iter = 13'd0;
-
                     if ((xm*xm + ym*ym <= 3'd4) && iter < max_iter) begin
                         xtemp = xm*xm - ym*ym + x;
                         ym = 2*xm*ym + y;
                         xm = xtemp;
-                        iter = iter + 1;
+                        iter = iter + 13'd1;
                         pstate <= `calc_loop;
                     end else begin
                         pstate <= `pixel_on;
