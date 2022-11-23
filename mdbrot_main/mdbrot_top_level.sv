@@ -15,7 +15,7 @@ module mdbrot_top_level_single_nozoom(input logic CLOCK_50, input logic [3:0] KE
     logic [6:0] vga_y;
     logic [2:0] vga_colour;
     assign start = KEY[3];
-    logic [12:0] max_iter = 13'd6000;
+    logic [12:0] max_iter = 13'd500;
     escape_time_mdbrot mandelbrot(CLOCK_50, KEY[3], start, max_iter, vga_x, vga_y, vga_colour, vga_plot);
     vga_adapter#(.RESOLUTION("160x120")) vga_u0(.resetn(KEY[3]), .clock(CLOCK_50), .colour(vga_colour),
                                             .x(vga_x), .y(vga_y), .plot(vga_plot),

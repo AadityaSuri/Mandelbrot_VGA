@@ -33,7 +33,7 @@ module tb_rtl_mdbrot();
         KEY[3] = 1'b1; #10;
         KEY[3] = 1'b0; #10;
         KEY[3] = 1'b1; #10;
-        KEY[3] = 1'b0;
+        // KEY[3] = 1'b0;
         
         // @(posedge LEDR[9]);
         // $stop();
