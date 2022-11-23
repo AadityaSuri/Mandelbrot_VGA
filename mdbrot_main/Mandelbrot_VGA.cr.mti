@@ -1,9 +1,9 @@
-C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/escape_time_mdbrot.sv {1 {vlog -work work -sv -stats=none C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/escape_time_mdbrot.sv
+C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/tb_rtl_mdbrot.sv {1 {vlog -work work -sv -stats=none C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/tb_rtl_mdbrot.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module escape_time_mdbrot
+-- Compiling module tb_rtl_mdbrot
 
 Top level modules:
-	escape_time_mdbrot
+	tb_rtl_mdbrot
 
 } {} {}} C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_adapter.sv {1 {vlog -work work -sv -stats=none C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_adapter.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -12,12 +12,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	vga_adapter
 
-} {} {}} C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/tb_rtl_mdbrot.sv {1 {vlog -work work -sv -stats=none C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/tb_rtl_mdbrot.sv
+} {} {}} C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/qadd.v {1 {vlog -work work -stats=none C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/qadd.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module tb_rtl_mdbrot
+-- Compiling module qadd
 
 Top level modules:
-	tb_rtl_mdbrot
+	qadd
+
+} {} {}} C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/qmult.v {1 {vlog -work work -stats=none C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/qmult.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module qmult
+
+Top level modules:
+	qmult
 
 } {} {}} C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_address_translator.sv {1 {vlog -work work -sv -stats=none C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_address_translator.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -26,12 +33,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	vga_address_translator
 
-} {} {}} C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_controller.sv {1 {vlog -work work -sv -stats=none C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_controller.sv
+} {} {}} C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/qdiv.v {1 {vlog -work work -stats=none C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/qdiv.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module vga_controller
+-- Compiling module qdiv
 
 Top level modules:
-	vga_controller
+	qdiv
 
 } {} {}} C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_pll.sv {1 {vlog -work work -sv -stats=none C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_pll.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -40,11 +47,11 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	vga_pll
 
-} {} {}} C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/mdbrot_top_level.sv {1 {vlog -work work -sv -stats=none C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/mdbrot_top_level.sv
+} {} {}} C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_controller.sv {1 {vlog -work work -sv -stats=none C:/Users/aadit/Desktop/Mandelbrot_VGA/vga-core/vga_controller.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module mdbrot_top_level_single_nozoom
+-- Compiling module vga_controller
 
 Top level modules:
-	mdbrot_top_level_single_nozoom
+	vga_controller
 
 } {} {}}

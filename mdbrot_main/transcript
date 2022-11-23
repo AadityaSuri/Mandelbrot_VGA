@@ -1,90 +1,26 @@
 # Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # OpenFile C:/Users/aadit/Desktop/Mandelbrot_VGA/mdbrot_main/Mandelbrot_VGA.mpf
 # Loading project Mandelbrot_VGA
+# Compile of escape_time_mdbrot.sv failed with 2 errors.
+# Compile of qmult.v was successful.
+# Compile of qadd.v was successful.
+# Compile of qdiv.v was successful.
+# 4 compiles, 1 failed with 2 errors.
+# Compile of escape_time_mdbrot.sv failed with 4 errors.
+# Compile of escape_time_mdbrot.sv failed with 4 errors.
+# Compile of escape_time_mdbrot.sv failed with 4 errors.
+# Compile of escape_time_mdbrot.sv failed with 4 errors.
+# Compile of escape_time_mdbrot.sv failed with 3 errors.
+# Compile of escape_time_mdbrot.sv failed with 1 errors.
 # Compile of escape_time_mdbrot.sv was successful.
-# reading C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini
-# Loading project fixed_point_testing
+# Compile of escape_time_mdbrot.sv was successful.
+# Compile of mdbrot_top_level.sv was successful.
+# Compile of vga_pll.sv was successful.
+# Compile of vga_adapter.sv was successful.
+# Compile of vga_address_translator.sv was successful.
+# Compile of vga_controller.sv was successful.
+# Compile of tb_rtl_mdbrot.sv was successful.
 # Compile of qmult.v was successful.
 # Compile of qadd.v was successful.
 # Compile of qdiv.v was successful.
-# 3 compiles, 0 failed with no errors.
-# Compile of tb_arith.sv was successful.
-# Compile of tb_arith.sv failed with 1 errors.
-# Compile of tb_arith.sv was successful.
-# Compile of qmult.v was successful.
-# Compile of qadd.v was successful.
-# Compile of qdiv.v was successful.
-# Compile of tb_arith.sv was successful.
-# 4 compiles, 0 failed with no errors.
-# Compile of tb_arith.sv failed with 2 errors.
-# Compile of tb_arith.sv failed with 1 errors.
-# Compile of tb_arith.sv failed with 3 errors.
-# Compile of tb_arith.sv failed with 2 errors.
-# Compile of tb_arith.sv failed with 2 errors.
-# Compile of tb_arith.sv was successful with warnings.
-# Compile of qmult.v was successful.
-# Compile of qadd.v was successful.
-# Compile of qdiv.v was successful.
-# Compile of tb_arith.sv was successful with warnings.
-# 4 compiles, 0 failed with no errors.
-# Compile of tb_arith.sv was successful with warnings.
-vsim -gui work.tb_arith
-# vsim -gui work.tb_arith 
-# Start time: 03:45:58 on Nov 23,2022
-# Loading sv_std.std
-# Loading work.tb_arith
-# Loading work.qadd
-add wave -position end  sim:/tb_arith/a
-add wave -position end  sim:/tb_arith/b
-add wave -position end  sim:/tb_arith/fp_sum
-run
-run
-# Compile of tb_arith.sv was successful with warnings.
-restart
-# Loading work.tb_arith
-run
-# Compile of tb_arith.sv was successful with warnings.
-restart
-# Loading work.tb_arith
-run
-# Compile of tb_arith.sv was successful with warnings.
-restart
-# Loading work.tb_arith
-run
-# Compile of tb_arith.sv was successful with warnings.
-restart
-# Loading work.tb_arith
-# ** Warning: (vsim-3015) C:/Users/aadit/Desktop/verilog_fixed_point_math_library/tb_arith.sv(9): [PCDPC] - Port size (8) does not match connection size (9) for port 'a'. The port definition is at: C:/Users/aadit/Desktop/verilog_fixed_point_math_library/qadd.v(27).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_arith/ADD File: C:/Users/aadit/Desktop/verilog_fixed_point_math_library/qadd.v
-# ** Warning: (vsim-3015) C:/Users/aadit/Desktop/verilog_fixed_point_math_library/tb_arith.sv(9): [PCDPC] - Port size (8) does not match connection size (9) for port 'b'. The port definition is at: C:/Users/aadit/Desktop/verilog_fixed_point_math_library/qadd.v(28).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_arith/ADD File: C:/Users/aadit/Desktop/verilog_fixed_point_math_library/qadd.v
-# ** Warning: (vsim-3015) C:/Users/aadit/Desktop/verilog_fixed_point_math_library/tb_arith.sv(9): [PCDPC] - Port size (8) does not match connection size (9) for port 'c'. The port definition is at: C:/Users/aadit/Desktop/verilog_fixed_point_math_library/qadd.v(29).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_arith/ADD File: C:/Users/aadit/Desktop/verilog_fixed_point_math_library/qadd.v
-run
-# Compile of tb_arith.sv was successful with warnings.
-restart
-# Loading work.tb_arith
-run
-# Compile of tb_arith.sv was successful with warnings.
-restart
-# Loading work.tb_arith
-# ** Warning: (vsim-3015) C:/Users/aadit/Desktop/verilog_fixed_point_math_library/tb_arith.sv(9): [PCDPC] - Port size (9) does not match connection size (7) for port 'a'. The port definition is at: C:/Users/aadit/Desktop/verilog_fixed_point_math_library/qadd.v(27).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_arith/ADD File: C:/Users/aadit/Desktop/verilog_fixed_point_math_library/qadd.v
-# ** Warning: (vsim-3015) C:/Users/aadit/Desktop/verilog_fixed_point_math_library/tb_arith.sv(9): [PCDPC] - Port size (9) does not match connection size (7) for port 'b'. The port definition is at: C:/Users/aadit/Desktop/verilog_fixed_point_math_library/qadd.v(28).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_arith/ADD File: C:/Users/aadit/Desktop/verilog_fixed_point_math_library/qadd.v
-# ** Warning: (vsim-3015) C:/Users/aadit/Desktop/verilog_fixed_point_math_library/tb_arith.sv(9): [PCDPC] - Port size (9) does not match connection size (7) for port 'c'. The port definition is at: C:/Users/aadit/Desktop/verilog_fixed_point_math_library/qadd.v(29).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_arith/ADD File: C:/Users/aadit/Desktop/verilog_fixed_point_math_library/qadd.v
-run
-# Compile of tb_arith.sv was successful with warnings.
-restart
-# Loading work.tb_arith
-run
-# Compile of tb_arith.sv was successful with warnings.
-restart
-# Loading work.tb_arith
-run
-# Compile of tb_arith.sv failed with 1 errors.
-# Compile of tb_arith.sv was successful.
-restart
-# Loading work.tb_arith
-run
+# 10 compiles, 0 failed with no errors.

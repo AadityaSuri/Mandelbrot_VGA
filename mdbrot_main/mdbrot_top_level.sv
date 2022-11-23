@@ -22,4 +22,8 @@ module mdbrot_top_level_single_nozoom(input logic CLOCK_50, input logic [3:0] KE
                                             .VGA_R(VGA_R), .VGA_G(VGA_G), .VGA_B(VGA_B),
                                             .VGA_HS(VGA_HS), .VGA_VS(VGA_VS), .VGA_BLANK(VGA_BLANK), .VGA_SYNC(VGA_SYNC), .VGA_CLK(VGA_CLK));
 
+    // logic [31:0] zoom = 
+    always_comb begin
+    end
+
 endmodule: mdbrot_top_level_single_nozoom
