@@ -27,7 +27,7 @@ logic signed [MAXBITS - 1:0] ym;
 
 
 // calculates the scaled values of X and Y coordinates, xscaled, yscaled
-logic signed [MAXBITS - 1:0] x_scaled1, y_scaled1, x_scaled, y_scaled;
+logic signed [MAXBITS - 1:0] x_scaled1, yscaled1, x_scaled, y_scaled;
 qmult #(FPBITS, MAXBITS) x_mult_xscale_mod(x, Xscale, x_scaled1);
 qmult #(FPBITS, MAXBITS) y_mult_yscale_mod(y, Yscale, y_scaled1);
 qadd #(FPBITS, MAXBITS) xscaled_mod(x_scaled1, {1'b1, xmin[30:0]}, x_scaled);
@@ -48,8 +48,7 @@ qadd #(FPBITS, MAXBITS) xtemp_mod(xtemp1, x_scaled, xtemp);
 //calculates 2*xm*ym + yscaled
 logic signed [MAXBITS - 1:0] xm_mult_ym, _2_xm_ym_plus_yscaled;
 qmult #(FPBITS, MAXBITS) xm_mult_ym_mod(xm, ym, xm_mult_ym);
-logic signed [31:0] _2_xm_ym;
-assign _2_xm_ym = xm_mult_ym << 1;
+logic signed [31:0] _2_xm_ym = xm_mult_ym << 1;
 qadd #(FPBITS, MAXBITS) _2_xm_ym_plus_yscaled_mod(_2_xm_ym, y_scaled, _2_xm_ym_plus_yscaled);
 
 
@@ -129,5 +128,5 @@ always_comb begin
           endcase
      end
 
-endmodule: escape_time_mdbrot
+endmodule
 
