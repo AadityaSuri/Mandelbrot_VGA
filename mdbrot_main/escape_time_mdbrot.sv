@@ -30,7 +30,7 @@ logic signed [MAXBITS - 1:0] ym;
 logic signed [MAXBITS - 1:0] x_scaled1, y_scaled1, x_scaled, y_scaled;
 qmult #(FPBITS, MAXBITS) x_mult_xscale_mod(x, Xscale, x_scaled1);
 qmult #(FPBITS, MAXBITS) y_mult_yscale_mod(y, Yscale, y_scaled1);
-qadd #(FPBITS, MAXBITS) xscaled_mod(x_scaled1, {1'b1, xmin[30:0]}, x_scaled);
+  qadd #(FPBITS, MAXBITS) xscaled_mod(x_scaled1, {1'b1, xmin[30:0]}, x_scaled);  // no need to make signed bit 1, 33, 34, 41, 45
 qadd #(FPBITS, MAXBITS) yscaled_mod(y_scaled1, {1'b1, ymin[30:0]}, y_scaled);
 
 // calculates xm^2 + ym^2
