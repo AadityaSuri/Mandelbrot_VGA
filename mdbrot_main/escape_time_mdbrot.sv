@@ -8,10 +8,10 @@ module escape_time_mdbrot(input logic clk, input logic rst, input start,
                           output logic [7:0] vga_x, output logic [6:0] vga_y, output logic [2:0] vga_colour, output logic vga_plot);
 
 localparam MAXBITS = 32;
-localparam FPBITS = 14;
+localparam FPBITS = 20;
 
 
-logic signed [MAXBITS - 1:0] four = 32'b0000_0000_0000_0001_0000_0000_0000_0000;
+logic signed [MAXBITS - 1:0] four = 32'b0000_0000_0100_0000_0000_0000_0000_0000;
 logic signed [MAXBITS - 1:0] x;
 logic signed [MAXBITS - 1:0] y;
 logic [1:0] pstate;
@@ -130,4 +130,10 @@ always_comb begin
      end
 
 endmodule: escape_time_mdbrot
+
+// module scale_to_cartesian(input logic [31:0] x, input logic [31:0] y,
+//                           output logic [31:0] x_scaled, output logic [31:0] y_scaled);
+
+
+// endmodule
 

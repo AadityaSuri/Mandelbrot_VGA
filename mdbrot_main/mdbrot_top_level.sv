@@ -22,16 +22,17 @@ module mdbrot_top_level_single_nozoom(input logic CLOCK_50, input logic [3:0] KE
     logic [12:0] max_iter = 13'd500;
 
     logic signed [31:0] xmin, xmax, ymin, ymax, Xscale, Yscale;
-    assign xmin = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-    assign xmax = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-    assign ymin = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-    assign ymax = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-    assign Xscale = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-    assign Yscale = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
+    assign xmin = 32'b1000_0000_0010_0000_0000_0000_0000_0000;  // -2
+    assign xmax = 32'b0000_0000_0000_0111_1000_0101_0001_1110;  // 0.47
+    assign ymin = 32'b1000_0000_0001_0001_1110_1011_1000_0101;  // -1.12
+    assign ymax = 32'b0000_0000_0001_0001_1110_1011_1000_0101;  // 1.12
+    assign Xscale = 32'b0000_0000_0000_0000_0011_1111_0011_1011; // 2.47/160
+    assign Yscale = 32'b0000_0000_0000_0000_0100_1100_0111_0101; // 2.24/120
 
-    escape_time_mdbrot mandelbrot(CLOCK_50, KEY[3], start_mdbrot, 
-                                  max_iter, xmin, xmax, ymin, ymax, Xscale, Yscale
-    max_iter, vga_x, vga_y, vga_colour, vga_plot);
+    escape_time_mdbrot mandelbrot(CLOCK_50, KEY[3], start, 
+                                  max_iter, xmin, xmax, ymin, ymax, Xscale, Yscale, 
+                                  vga_x, vga_y, vga_colour, vga_plot);
+                                  
     vga_adapter#(.RESOLUTION("160x120")) vga_u0(.resetn(KEY[3]), .clock(CLOCK_50), .colour(vga_colour),
                                             .x(vga_x), .y(vga_y), .plot(vga_plot),
                                             .VGA_R(VGA_R), .VGA_G(VGA_G), .VGA_B(VGA_B),
@@ -40,7 +41,7 @@ module mdbrot_top_level_single_nozoom(input logic CLOCK_50, input logic [3:0] KE
     
 
     // logic [31:0] zoom = 
-    always_comb begin
-    end
+    // always_comb begin
+    // end
 
 endmodule: mdbrot_top_level_single_nozoom
