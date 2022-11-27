@@ -1,7 +1,8 @@
-`define start 2'd0
-`define pixel_on 2'd1
-`define calc_loop 2'd2
-`define done 2'd3
+`define start 3'd0
+`define pixel_on 3'd1
+`define calc_loop 3'd2
+`define waitstate 3'd3
+`define done 3'd4 
 
 module escape_time_mdbrot(input logic clk, input logic rst, input start, 
                           input logic [12:0] max_iter, input logic [31:0] xmin, input logic [31:0] xmax, input logic [31:0] ymin, input logic [31:0] ymax, input logic [31:0] Xscale, input logic [31:0] Yscale,
@@ -30,8 +31,8 @@ logic signed [MAXBITS - 1:0] ym;
 logic signed [MAXBITS - 1:0] x_scaled1, y_scaled1, x_scaled, y_scaled;
 qmult #(FPBITS, MAXBITS) x_mult_xscale_mod(x, Xscale, x_scaled1);
 qmult #(FPBITS, MAXBITS) y_mult_yscale_mod(y, Yscale, y_scaled1);
-  qadd #(FPBITS, MAXBITS) xscaled_mod(x_scaled1, {1'b1, xmin[30:0]}, x_scaled);  // no need to make signed bit 1, 33, 34, 41, 45
-qadd #(FPBITS, MAXBITS) yscaled_mod(y_scaled1, {1'b1, ymin[30:0]}, y_scaled);
+qadd #(FPBITS, MAXBITS) xscaled_mod(x_scaled1, xmin, x_scaled);  // no need to make signed bit 1, 33, 34, 41, 45
+qadd #(FPBITS, MAXBITS) yscaled_mod(y_scaled1, ymin, y_scaled);
 
 // calculates xm^2 + ym^2
 logic signed [MAXBITS - 1:0] xm2, ym2, xm2_plus_ym2, zero_check;
@@ -77,10 +78,12 @@ always @(posedge clk) begin
                               xm = {32{1'b0}};
                               ym = {32{1'b0}};
                               iter = 14'd0;
-                              pstate <= `calc_loop;
+                              pstate <= `waitstate;
                          end else 
                               pstate <= `done;
                end
+
+               `waitstate: pstate <= `calc_loop;
 
                `calc_loop: begin
                     if ((zero_check[31] == 1'b1) && iter < max_iter) begin
